@@ -1,0 +1,1 @@
+worker: python app/peta_bot.py
