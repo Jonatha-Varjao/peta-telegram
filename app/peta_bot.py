@@ -1,3 +1,4 @@
+import os
 import logging
 import telegram
 from telegram.error import NetworkError, Unauthorized
@@ -9,7 +10,7 @@ update_id = None
 
 def main():
     global update_id
-    bot = telegram.Bot(os.geten('TELEGRAM_API'))
+    bot = telegram.Bot(os.getenv('TELEGRAM_API'))
     try:
         update_id = bot.get_updates()[0].update_id
     except IndexError:
